@@ -1,0 +1,434 @@
+/**
+ * AUTHENTICATION APP - PROFESSIONAL STYLESHEET
+ * Clean, minimalistic design with professional colors
+ * Responsive design optimized for mobile and desktop views
+ */
+
+/* ==================== GLOBAL STYLES ==================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* ==================== CONTAINER LAYOUT ==================== */
+
+/** App container - Centers form on page with full viewport height */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+/** Form container wrapper - Controls form width and responsiveness */
+.form-container {
+  width: 100%;
+  max-width: 450px;
+  position: relative;
+  z-index: 10;
+}
+
+/** Decorative header emoji */
+.form-header-deco {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 20px;
+  opacity: 0.7;
+}
+
+/** Form box - Clean white card with subtle shadow */
+.form-box {
+  background: white;
+  padding: 50px 40px 40px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e8e8e8;
+}
+
+/* ==================== FORM HEADER ==================== */
+
+/** Form title - Clean heading */
+.form-title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  text-align: center;
+  color: #1a1a1a;
+}
+
+/** Form subtitle */
+.form-subtitle {
+  text-align: center;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 32px;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+}
+
+/* ==================== FORM GROUPS & INPUTS ==================== */
+
+/** Form group wrapper - Contains label and input with spacing */
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/** Label styling for form inputs */
+.form-group label {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #555;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+/** Input field styling - Clean professional design */
+.form-group input {
+  padding: 11px 13px;
+  border: 1px solid #d0d0d0;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: all 0.25s ease;
+  background-color: #fff;
+}
+
+/** Input focus state - Subtle blue border */
+.form-group input:focus {
+  outline: none;
+  border-color: #4a90e2;
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.08);
+}
+
+/** Error state styling for inputs - Subtle red */
+.form-group input.input-error {
+  border-color: #e74c3c;
+  background-color: #fff;
+}
+
+/** Error message text - Professional red */
+.error-text {
+  font-size: 12px;
+  color: #e74c3c;
+  margin-top: 5px;
+  font-weight: 400;
+}
+
+/* ==================== PASSWORD TOGGLE ==================== */
+
+/** Password input wrapper - Container for password field and toggle button */
+.password-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-input-wrapper input {
+  flex: 1;
+}
+
+/** Toggle password button - Show/Hide password visibility button */
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  color: #4a90e2;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 4px 8px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.toggle-password:hover {
+  color: #2e5cb8;
+}
+
+.toggle-password:active {
+  opacity: 0.8;
+}
+
+/* ==================== BUTTONS ==================== */
+
+/** Submit button (Login/Sign Up) - Professional button with subtle styling */
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 12px;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+/** Submit button hover state - Slightly darker blue */
+.submit-btn:hover {
+  background-color: #2e5cb8;
+}
+
+/** Submit button active state - Pressed effect */
+.submit-btn:active {
+  background-color: #1d3a7a;
+}
+
+/* ==================== MESSAGE ALERTS ==================== */
+
+/** Success message - Professional green alert */
+.success-message {
+  background-color: #ecf8f3;
+  color: #0b7a4f;
+  padding: 11px 13px;
+  border-radius: 6px;
+  margin-bottom: 18px;
+  font-weight: 500;
+  font-size: 13px;
+  border-left: 3px solid #0b7a4f;
+}
+
+/** Submit error message - Professional red alert */
+.submit-error {
+  background-color: #fadcd9;
+  color: #a92f1b;
+  padding: 11px 13px;
+  border-radius: 6px;
+  margin-bottom: 18px;
+  font-weight: 500;
+  font-size: 13px;
+  border-left: 3px solid #a92f1b;
+}
+
+/* ==================== FORM FOOTER ==================== */
+
+/** Form footer text - Text with link to switch between login/signup */
+.form-footer {
+  text-align: center;
+  font-size: 13px;
+  margin-top: 22px;
+  color: #666;
+  font-weight: 400;
+}
+
+/** Link button - Styled link to switch between pages */
+.link-btn {
+  background: none;
+  border: none;
+  color: #4a90e2;
+  cursor: pointer;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0;
+  font-size: 13px;
+  transition: all 0.2s ease;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+/** Link button hover - Subtle color change */
+.link-btn:hover {
+  color: #2e5cb8;
+  text-decoration: underline;
+}
+
+.link-btn:active {
+  opacity: 0.8;
+}
+
+/** Demo hint - Small informational text */
+.demo-hint {
+  text-align: center;
+  font-size: 12px;
+  color: #999;
+  margin-top: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* ==================== WELCOME CARD ==================== */
+
+/** Welcome card - Success screen after login */
+.welcome-card {
+  background: white;
+  padding: 50px 40px 40px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e8e8e8;
+  max-width: 450px;
+  width: 100%;
+  text-align: center;
+}
+
+/** Welcome header with avatar */
+.welcome-header {
+  margin-bottom: 28px;
+}
+
+/** Welcome avatar - User initial circle */
+.welcome-avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #4a90e2;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0 auto 18px;
+  box-shadow: 0 2px 8px rgba(74, 144, 226, 0.2);
+}
+
+/** Welcome title */
+.welcome-title {
+  font-size: 26px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+/** Welcome content - User info display */
+.welcome-content {
+  margin-bottom: 28px;
+}
+
+/** Welcome name */
+.welcome-name {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.welcome-name strong {
+  color: #4a90e2;
+  font-weight: 600;
+}
+
+/** Welcome email */
+.welcome-email {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 14px;
+  font-weight: 400;
+}
+
+/** Welcome message */
+.welcome-message {
+  font-size: 13px;
+  color: #0b7a4f;
+  font-weight: 500;
+}
+
+/** Logout button */
+.logout-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.logout-btn:hover {
+  background-color: #c0392b;
+}
+
+.logout-btn:active {
+  background-color: #a93226;
+}
+
+/* ==================== MOBILE RESPONSIVE DESIGN ==================== */
+
+/**
+ * Mobile optimization (screens up to 600px width)
+ * Clean adjustments for smaller screens
+ */
+@media (max-width: 600px) {
+  .form-box {
+    padding: 40px 24px 32px;
+  }
+
+  .form-title {
+    font-size: 24px;
+  }
+
+  .form-subtitle {
+    font-size: 12px;
+    margin-bottom: 24px;
+  }
+
+  .form-group {
+    margin-bottom: 18px;
+  }
+
+  .form-group input {
+    font-size: 16px;
+  }
+
+  .submit-btn {
+    padding: 11px;
+    font-size: 13px;
+    margin-top: 10px;
+  }
+
+  .form-footer {
+    font-size: 12px;
+    margin-top: 18px;
+  }
+
+  .demo-hint {
+    font-size: 11px;
+    margin-top: 12px;
+  }
+
+  .welcome-card {
+    padding: 40px 24px 32px;
+  }
+
+  .welcome-avatar {
+    width: 65px;
+    height: 65px;
+    font-size: 28px;
+    margin-bottom: 14px;
+  }
+
+  .welcome-title {
+    font-size: 24px;
+  }
+
+  .welcome-name {
+    font-size: 15px;
+  }
+
+  .logout-btn {
+    padding: 11px;
+    font-size: 13px;
+  }
+}

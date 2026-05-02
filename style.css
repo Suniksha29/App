@@ -1,0 +1,304 @@
+/**
+ * Auth UI — professional, minimal palette
+ * Layout: centered card, responsive (mobile / tablet / desktop)
+ */
+
+/* ---------- Reset & base ---------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, Cantarell, sans-serif;
+  color: #1c1c1e;
+  line-height: 1.5;
+  min-height: 100vh;
+  background: linear-gradient(160deg, #eef1f5 0%, #e3e8ef 45%, #dce3eb 100%);
+}
+
+/* ---------- Layout ---------- */
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(1rem, 4vw, 2.5rem);
+}
+
+.form-container {
+  width: 100%;
+  max-width: 26rem;
+}
+
+/* Card: subtle elevation + hover */
+
+.card {
+  background: #fff;
+  border-radius: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 12px 32px rgba(15, 23, 42, 0.08);
+  padding: clamp(1.75rem, 5vw, 2.5rem);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.card:hover {
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.05),
+    0 16px 40px rgba(15, 23, 42, 0.1);
+}
+
+.form-title {
+  font-size: clamp(1.35rem, 4vw, 1.6rem);
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: #0f172a;
+  margin-bottom: 0.35rem;
+}
+
+.form-subtitle {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #64748b;
+  margin-bottom: 1.75rem;
+}
+
+/* ---------- Form groups ---------- */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.1rem;
+}
+
+.form-group label {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  font-size: 0.9375rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #fff;
+  color: #0f172a;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.form-group input::placeholder {
+  color: #94a3b8;
+}
+
+.form-group input:hover:not(:disabled) {
+  border-color: #94a3b8;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #3b5bdb;
+  box-shadow: 0 0 0 3px rgba(59, 91, 219, 0.15);
+}
+
+.form-group input:focus-visible {
+  outline: 2px solid #3b5bdb;
+  outline-offset: 2px;
+}
+
+.form-group input.input-error {
+  border-color: #dc2626;
+  background-color: #fff;
+}
+
+.form-group input.input-error:focus {
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.12);
+}
+
+.error-text {
+  font-size: 0.75rem;
+  color: #b91c1c;
+  min-height: 1.125rem;
+}
+
+/* ---------- Password toggle (icon) ---------- */
+
+.password-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-input-wrapper input {
+  padding-right: 2.75rem;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 0.35rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: #64748b;
+  cursor: pointer;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.toggle-password:hover {
+  color: #3b5bdb;
+  background: rgba(59, 91, 219, 0.08);
+}
+
+.toggle-password:focus-visible {
+  outline: 2px solid #3b5bdb;
+  outline-offset: 2px;
+}
+
+.toggle-password__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-password__icon svg {
+  display: block;
+}
+
+/* Hidden until password visible */
+.toggle-password[aria-pressed="false"] .toggle-password__icon--hide {
+  display: none;
+}
+
+.toggle-password[aria-pressed="true"] .toggle-password__icon--show {
+  display: none;
+}
+
+.toggle-password[aria-pressed="true"] .toggle-password__icon--hide {
+  display: flex;
+}
+
+/* ---------- Buttons ---------- */
+
+.submit-btn {
+  width: 100%;
+  margin-top: 0.35rem;
+  padding: 0.7rem 1rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: #fff;
+  background: #334155;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease, opacity 0.2s ease;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: #1e293b;
+}
+
+.submit-btn:active:not(:disabled) {
+  transform: scale(0.99);
+}
+
+.submit-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.submit-btn:focus-visible {
+  outline: 2px solid #3b5bdb;
+  outline-offset: 3px;
+}
+
+.form-footer {
+  text-align: center;
+  font-size: 0.8125rem;
+  color: #64748b;
+  margin-top: 1.35rem;
+}
+
+.link-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  font-weight: 600;
+  color: #3b5bdb;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease;
+}
+
+.link-btn:hover {
+  color: #1e3a8a;
+}
+
+.link-btn:focus-visible {
+  outline: 2px solid #3b5bdb;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* ---------- Messages ---------- */
+
+.success-message,
+.submit-error {
+  padding: 0.65rem 0.85rem;
+  border-radius: 8px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.success-message {
+  color: #14532d;
+  background: #ecfdf5;
+  border: 1px solid #bbf7d0;
+}
+
+.submit-error {
+  color: #7f1d1d;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (min-width: 480px) and (max-width: 900px) {
+  .form-container {
+    max-width: 28rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-group input {
+    font-size: 1rem;
+  }
+}
